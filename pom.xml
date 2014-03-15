@@ -4,6 +4,10 @@
   <artifactId>exemplar</artifactId>
   <version>1.0.0</version>
 
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
   <dependencies>
 
     <dependency>
@@ -58,5 +62,33 @@
     -->
 
   </dependencies>
+
+  <build>
+    <plugins>
+      <!-- https://code.google.com/p/addjars-maven-plugin/wiki/UsagePage -->
+      <plugin>
+        <groupId>com.googlecode.addjars-maven-plugin</groupId>
+        <artifactId>addjars-maven-plugin</artifactId>
+        <version>1.0.5</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>add-jars</goal>
+            </goals>
+            <configuration>
+              <resources>
+                <resource>
+                  <directory>${basedir}/lib</directory>
+                  <includes>
+                    <include>**/*.jar</include>
+                  </includes>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
 
 </project>
