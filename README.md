@@ -24,13 +24,13 @@ The role of an argument can be one of the following: SUBJ (subject), DOBJ (direc
 
 ## Building
 
-Download all dependencies:
+Download all dependencies (that do not exist in a Maven repository):
 
     $ sh dependencies.sh 
 
-Compile and build jar with all dependencies:
+Compile and build JAR with Maven:
 
-    $ sh build.sh 
+    $ mvn compile
 
 ## Running
 
