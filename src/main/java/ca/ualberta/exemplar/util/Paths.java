@@ -26,8 +26,11 @@ package ca.ualberta.exemplar.util;
  */
 public class Paths {
 
-	public static final String NORMALIZED_VERBS = "data/nominalizedverbs.txt";
-    public static final String MALT_PARSER_FILENAME = "engmalt.linear-1.7.mco";
-    public static final String MALT_PARSER_DIRECTORY = "lib/";
-	
+	/**
+	 * Absolute reference to nominalized verbs data file.
+	 */
+	public static final String NORMALIZED_VERBS = "/ca/ualberta/exemplar/data/nominalizedverbs.txt";
+	public static final String MALT_PARSER_FILENAME = "engmalt.linear-1.7.mco";
+	public static final String MALT_PARSER_DIRECTORY = "lib/";
+
 }

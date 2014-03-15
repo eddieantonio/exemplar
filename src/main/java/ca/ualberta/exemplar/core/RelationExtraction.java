@@ -20,7 +20,6 @@ package ca.ualberta.exemplar.core;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -81,7 +80,7 @@ public class RelationExtraction {
 	private void readNominalizedVerbMap()
 			throws FileNotFoundException {
 		BufferedReader reader = new BufferedReader(new InputStreamReader(
-				new FileInputStream(new File(Paths.NORMALIZED_VERBS))));
+				this.getClass().getResourceAsStream(Paths.NORMALIZED_VERBS)));
 		nominalizedVerbMap = new HashMap<String,String>();
 		String line = null;
 		try {
